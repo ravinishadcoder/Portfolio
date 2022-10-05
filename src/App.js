@@ -1,35 +1,43 @@
-import React, { useContext } from 'react';
-import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
-
-import { ThemeContext } from './contexts/ThemeContext';
-import { Main, ProjectPage } from './pages'
-import { BackToTop } from './components'
-import ScrollToTop from './utils/ScrollToTop'
-
-import './App.css'
+import React, { useState, useEffect } from "react";
+import Preloader from "../src/components/Pre";
+import Navbar from "./components/Navbar";
+import Home from "./components/Home/Home";
+import About from "./components/About/About";
+import Projects from "./components/Projects/Projects";
+import Footer from "./components/Footer";
+import Resume from "./components/Resume/ResumeNew";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  Navigate
+} from "react-router-dom";
+import ScrollToTop from "./components/ScrollToTop";
+import "./style.css";
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
+  const [load, upadateLoad] = useState(true);
 
-  const { theme } = useContext(ThemeContext);
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      upadateLoad(false);
+    }, 1200);
 
-  console.log("%cDEVELOPER PORTFOLIO", `color:${theme.primary}; font-size:50px`);
-  console.log("%chttps://github.com/hhhrrrttt222111/developer-portfolio", `color:${theme.tertiary}; font-size:20px`);
-  // console.log = console.warn = console.error = () => {};
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
-    <div className="app">
-      <Router>
-        <ScrollToTop/>
-        <Switch>
-          <Route path="/" exact component={Main} />
-          {/* <Route path="/blog" exact component={BlogPage} /> */}
-          <Route path="/projects" exact component={ProjectPage} />
-
-          <Redirect to="/" />
-        </Switch>
-      </Router>
-      <BackToTop />
-    </div>
+    <Router>
+      <Preloader load={load} />
+      <div className="App" id={load ? "no-scroll" : "scroll"}>
+        <Navbar />
+        <ScrollToTop />
+        
+        <Footer />
+      </div>
+    </Router>
   );
 }
 
