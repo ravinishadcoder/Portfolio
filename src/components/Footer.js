@@ -12,56 +12,9 @@ function Footer() {
   let year = date.getFullYear();
   return (
     <Container fluid className="footer">
-      <Row>
+      <Row style={{display:"flex",justifyContent:"center"}} >
         <Col md="4" className="footer-copywright">
           <h3>Designed and Developed by Ravi </h3>
-        </Col>
-        <Col md="4" className="footer-copywright">
-          <h3>Copyright © {year} RB</h3>
-        </Col>
-        <Col md="4" className="footer-body">
-          <ul className="footer-icons">
-            <li className="social-icons">
-              <a
-                href="https://github.com/ravinishadcoder/"
-                style={{ color: "white" }}
-                target="_blank" 
-                rel="noopener noreferrer"
-              >
-                <AiFillGithub />
-              </a>
-            </li>
-            <li className="social-icons">
-              <a
-                href="https://twitter.com/ravicoder264"
-                style={{ color: "white" }}
-                target="_blank" 
-                rel="noopener noreferrer"
-              >
-                <AiOutlineTwitter />
-              </a>
-            </li>
-            <li className="social-icons">
-              <a
-                href="https://www.linkedin.com/in/ravi-kumar-nishad-20543122a/"
-                style={{ color: "white" }}
-                target="_blank" 
-                rel="noopener noreferrer"
-              >
-                <FaLinkedinIn />
-              </a>
-            </li>
-            <li className="social-icons">
-              <a
-                href="https://www.instagram.com/ravi_coder/?hl=en"
-                style={{ color: "white" }}
-                target="_blank" 
-                rel="noopener noreferrer"
-              >
-                <AiFillInstagram />
-              </a>
-            </li>
-          </ul>
         </Col>
       </Row>
     </Container>

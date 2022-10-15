@@ -8,6 +8,7 @@ function Type() {
         strings: [
           
           "MERN Stack Developer",
+          "Problem Solver"
           
         ],
         autoStart: true,

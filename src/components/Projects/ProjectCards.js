@@ -6,11 +6,11 @@ import { BsGithub } from "react-icons/bs";
 import "../../style.css";
 function ProjectCards(props) {
   return (
-    <Card className="project-card-view cardDiv">
+    <Card className="project-card-view cardDiv glass project-div">
       <Card.Img variant="top" src={props.imgPath} alt="card-img" />
       <Card.Body id="cardBody">
         <div>
-          <Card.Title>{props.title}</Card.Title>
+          <Card.Title style={{ color: "#801f95" }}>{props.title}</Card.Title>
         </div>
         <div>
           <Card.Text style={{ textAlign: "justify" }}>
@@ -18,7 +18,7 @@ function ProjectCards(props) {
           </Card.Text>
         </div>
         <div>
-          <span style={{ color: "#801f95" }}>Tech-Stack</span>
+          <Card.Title style={{ color: "#801f95" }}>{"Tech-Stack"}</Card.Title>
           <p>
             {props.stack.map((el, i) => (
               <span key={i}>{el}, </span>

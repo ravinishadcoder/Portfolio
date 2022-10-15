@@ -26,8 +26,7 @@ function Projects({project}) {
               isBlog={false}
               title="Tata 1Mg Clone"
               description="TATA 1mg.com is an e-commerce web application that
-              widely provides e-pharmacy and healthcare solutions
-              related services across India."
+              widely provides e-pharmacy services across India."
               stack={[
                 "Javascript",
                 "ReactJs",
@@ -58,7 +57,7 @@ function Projects({project}) {
               imgPath={editor}
               isBlog={false}
               title="Lumen5"
-              stack={["Javascript", "React", "Chakra-UI"]}
+              stack={["Javascript", "React", "Chakra-UI","HTML","Tailwind-CSS"]}
               description="Lumen5 is a video-creating platform that allows the creation of interactive videos without any effort."
               ghLink="https://github.com/ravinishadcoder/Lumen5-clone"
               demoLink="https://lumen5-teammasai.netlify.app/"
@@ -72,7 +71,7 @@ function Projects({project}) {
               stack={["Javascript", "HTML", "CSS", "Bootsrap"]}
               description="Sugar cosmetic is selling online beauty products, This
               is the site where you can various types of cosmetic
-              products like makeup kits, etc."
+              products like makeup kits."
               ghLink="https://github.com/ravinishadcoder/SUGAR-Cosmetic-Clone"
               demoLink="https://melodic-malabi-d69a87.netlify.app/"
             />

@@ -1,60 +1,101 @@
 import React from "react";
 import { Col, Row } from "react-bootstrap";
-import { CgCPlusPlus } from "react-icons/cg";
 import {
   DiJavascript1,
   DiReact,
   DiNodejs,
   DiMongodb,
   DiPython,
-  DiGit,
-  
+  DiMysql,
+  DiHtml5,
+  DiCss3Full,
+  DiRedis
 } from "react-icons/di";
+
 import {
-  SiExpress,
-  SiPytorch,
-  SiFirebase,
-  SiNextdotjs,
-  SiCss3,
-  SiHtml5,
   SiMaterialui,
-  SiChakraui
+  SiExpress,
 } from "react-icons/si";
+
+const frontendStacks = [
+  {
+    icon: <DiJavascript1 />,
+    label: "JavaScript",
+  },
+  {
+    icon: <DiReact />,
+    label: "React",
+  },
+  {
+    icon: <SiMaterialui />,
+    label: "Material UI",
+  },
+  {
+    icon: <DiHtml5/>,
+    label: "HTML",
+  },
+  {
+    icon: <DiCss3Full />,
+    label: "CSS",
+  }
+];
+
+const backendStacks = [
+  {
+    icon: <DiNodejs />,
+    label: "Node",
+  },
+  {
+    icon: <SiExpress />,
+    label: "Express",
+  },
+  {
+    icon: <DiMongodb />,
+    label: "MongoDB",
+  }
+  ,
+  {
+    icon: <DiRedis/>,
+    label: "Redis",
+  }
+];
 
 function Techstack() {
   return (
-    <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiHtml5 />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiCss3/>
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiJavascript1 />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiReact />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiNodejs />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiMongodb />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiExpress />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiGit />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiMaterialui />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiChakraui />
-      </Col>
-    </Row>
+    <>
+      <h1 className="project-heading">
+        Frontend
+      </h1>
+      <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
+        {
+          frontendStacks.map(stack => (
+            <Col key={stack.label} xs={4} md={2} className="tech-icons">
+              <div className="skill glass light">
+                {stack.icon}
+                <p>{stack.label}</p>
+              </div>
+            </Col>
+          ))
+        }
+      </Row>
+      
+      <h1 className="project-heading">
+        Backend
+      </h1>
+      <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
+        {
+          backendStacks.map(stack => (
+            <Col key={stack.label} xs={4} md={2} className="tech-icons">
+              <div className="skill glass light">
+                {stack.icon}
+                <p>{stack.label}</p>
+              </div>
+            </Col>
+          ))
+        }
+      </Row>
+      
+    </>
   );
 }
 
