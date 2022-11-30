@@ -33,7 +33,7 @@ function Home2({ contact }) {
               </li>
               <li className="social-icons">
                 <a
-                  href="https://mail.google.com/mail/u/0/#inbox"
+                  href="mailto:ravicoder264@gmail.com"
                   target="_blank"
                   rel="noreferrer"
                   className="icon-colour  home-social-icons"

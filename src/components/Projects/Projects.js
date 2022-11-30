@@ -73,7 +73,7 @@ function Projects({project}) {
               is the site where you can various types of cosmetic
               products like makeup kits."
               ghLink="https://github.com/ravinishadcoder/SUGAR-Cosmetic-Clone"
-              demoLink="https://melodic-malabi-d69a87.netlify.app/"
+              demoLink="https://zingy-druid-0af270.netlify.app/"
             />
           </Col>
           <Col md={4} className="project-card">
