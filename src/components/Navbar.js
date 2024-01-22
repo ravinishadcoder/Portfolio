@@ -158,7 +158,7 @@ function NavBar() {
                     textDecoration: "none",
                     top: "10px",
                   }}
-                  href="https://drive.google.com/file/d/11JBu21JdM_spaIaaMPM8RII9SY-Nggtp/view?usp=sharing"
+                  href="https://drive.google.com/file/d/1VsP6KV7x6w0x5IwE9IYxhxb_3l_vOgLy/view?usp=sharing"
                 >
                   <CgFileDocument style={{ marginBottom: "2px" }} /> Resume
                 </a>
